@@ -1,20 +1,24 @@
 pipeline {
     agent any
+
     stages {
-        stage('Build') {
+        stage('Checkout') {
             steps {
-                echo 'Building...'
+                git 'https://github.com/furkankorkmazuseinsider/deneme2.git'
             }
         }
-        stage('Test') {
+
+        stage('Install Dependencies') {
             steps {
-                echo 'Running tests...'
+                sh 'pip install -r requirements.txt'
             }
         }
-        stage('Deploy') {
+
+        stage('Run Selenium Tests') {
             steps {
-                echo 'Deploying...'
+                sh 'python3 tests/test_insider_careers.py'
             }
         }
     }
 }
+
