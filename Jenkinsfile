@@ -90,7 +90,7 @@ pipeline {
                 sh '''
                 set -e
                 source venv/bin/activate
-                python3 lcw_test.py
+                python3 test_insider_careers.py
                 '''
             }
         }
