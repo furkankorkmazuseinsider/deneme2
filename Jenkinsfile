@@ -18,9 +18,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 git(
-                    branch: 'main', 
-                    url: 'git@github.com:havvanurborekcinsider/UI_test.git', 
-                    credentialsId: 'github_key'
+                    branch: 'master', 
+                    url: 'git@github.com:furkankorkmazuseinsider/deneme2.git', 
+                    credentialsId: 'githubkey'
                 )
             }
         }
