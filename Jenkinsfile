@@ -19,7 +19,7 @@ pipeline {
             steps {
                 git(
                     branch: 'master', 
-                    url: 'git@github.com:furkankorkmazuseinsider/deneme2.git', 
+                    url: 'https://github.com/furkankorkmazuseinsider/deneme2.git', 
                     credentialsId: 'githubkey'
                 )
             }
